@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:ignore="ExtraText">
+    <!-- Fade-in animation -->
+    <alpha
+        android:duration="2000"
+        android:fromAlpha="0.0"
+        android:toAlpha="1.0" />
+
+    <!-- Rotate animation -->
+    <rotate
+        android:fromDegrees="0"
+        android:toDegrees="5"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:duration="1000"
+        android:repeatCount="0" /> <!-- No repeat, rotates only once -->
+
+    <rotate
+        android:fromDegrees="5"
+        android:toDegrees="0"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:duration="1000"
+        android:startOffset="1000"
+        android:repeatCount="0" />
+</set>

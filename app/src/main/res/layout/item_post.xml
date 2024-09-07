@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_marginTop="20dp"
+    android:background="@drawable/rounded_edittext">
+
+    <!-- User Info (Profile Image and Username) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_corner_background"
+        android:backgroundTint="#FFFFFF"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/post_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Username"
+            android:textColor="#120F0F"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!-- Post Image (User Uploaded) -->
+    <ImageView
+        android:id="@+id/post_image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="centerCrop"
+        android:visibility="visible" />
+
+    <!-- Post Content -->
+    <TextView
+        android:id="@+id/post_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="This is a sample post..."
+        android:textColor="#191414"
+        android:background="@drawable/rounded_edittext"
+        android:textSize="14sp" />
+
+    <!-- Like and Comment Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- Like Icon -->
+        <ImageView
+            android:id="@+id/like_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_like" />
+
+        <!-- Like Count -->
+        <TextView
+            android:id="@+id/like_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="62"
+            android:textColor="#6A6868" />
+
+        <!-- Comment Icon -->
+        <ImageView
+            android:id="@+id/comment_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/ic_comment" />
+
+        <!-- Comment Count -->
+        <TextView
+            android:id="@+id/comment_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="2"
+            android:textColor="#6A6868" />
+
+        <!-- Contact Button -->
+        <ImageView
+            android:id="@+id/button_contact"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="Contact"
+            android:src="@drawable/icon_contact" />
+    </LinearLayout>
+
+    <!-- Comment Section -->
+    <LinearLayout
+        android:id="@+id/comment_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <!-- Comment Input Field and Submit Button in a Horizontal LinearLayout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- Comment Input Field -->
+            <EditText
+                android:id="@+id/comment_input"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_edittext"
+                android:hint="Write a comment..."
+                android:padding="8dp"
+                android:textColor="#130F0F"
+                android:textColorHint="#777575" />
+
+            <!-- Submit Comment Button -->
+            <ImageButton
+                android:id="@+id/button_send_comment"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/icon_send"
+                android:contentDescription="Send Comment"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_marginStart="8dp"
+                app:tint="@color/my_primary" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/comment_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Comments"
+            android:textColor="#191414"
+            android:textSize="14sp" />
+
+        <!-- Comments List (RecyclerView for showing existing comments) -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/comments_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_edittext"
+            android:visibility="visible"/>
+    </LinearLayout>
+</LinearLayout>

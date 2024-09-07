@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+    <!-- Back Button -->
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="Back"
+        android:padding="8dp"
+        android:src="@drawable/baseline_arrow_back_ios_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Logo Image -->
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="158dp"
+        android:layout_height="156dp"
+        android:layout_marginTop="54dp"
+        android:src="@drawable/unitalk"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/backButton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Register Text -->
+    <TextView
+        android:id="@+id/registerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Register"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/my_primary"
+        app:layout_constraintBottom_toTopOf="@id/emailLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logoImageView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!-- Email Label -->
+
+    <TextView
+        android:id="@+id/emailLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Email"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/registerText" />
+
+    <!-- Email EditText -->
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:hint="Email"
+        android:background="@color/fouth"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/emailLabel"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <TextView
+        android:id="@+id/usernameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Username"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/email" />
+
+    <!-- Username EditText -->
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:hint="Username"
+        android:background="@color/fouth"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/usernameLabel"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!-- Password Label -->
+    <TextView
+        android:id="@+id/passwordLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Password"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/username" />
+
+    <!-- Password EditText -->
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:hint="Password"
+        android:background="@color/fouth"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/passwordLabel"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/togglePasswordVisibility"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_visibility_off_24"
+        android:contentDescription="Toggle Password Visibility"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/passwordLabel"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintVertical_bias="0.0" />
+    <!-- Confirm Password Label -->
+
+
+    <!-- Register Button -->
+    <Button
+        android:id="@+id/registerButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="#48AAAD"
+        android:text="Register"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@id/password" />
+
+    <!-- Already have an account Text -->
+    <TextView
+        android:id="@+id/signInLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="Already have an account? Sign In"
+        android:textColor="@android:color/holo_blue_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/registerButton" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

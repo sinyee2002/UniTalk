@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "267979036011",
+    "project_id": "mobile-application-assg",
+    "storage_bucket": "mobile-application-assg.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:267979036011:android:3912eeb68d4b9cf688e82e",
+        "android_client_info": {
+          "package_name": "com.example.unitalk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "267979036011-au7aj4859er6gcsbo9pba9jqvh5bn90b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.unitalk",
+            "certificate_hash": "39cf458bd5ca9668bf59583685831a17dd317271"
+          }
+        },
+        {
+          "client_id": "267979036011-9ijagjvpq4sr71r39ksf19qk0ts11gh8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDuGdyQSI3mbkMD86RyprzFu4veyIDfF8Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "267979036011-9ijagjvpq4sr71r39ksf19qk0ts11gh8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

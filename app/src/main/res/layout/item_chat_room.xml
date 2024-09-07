@@ -1,0 +1,75 @@
+<!-- res/layout/chat_room_item.xml -->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rectangle"
+    android:backgroundTint="@color/white"
+    android:padding="12dp"
+    android:layout_marginBottom="8dp"
+    android:clipToPadding="false">
+
+    <!-- Chat Room Image -->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/room_image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/person_icon"
+        android:layout_alignParentStart="true"
+        android:contentDescription="Chat Room Image"
+        android:elevation="4dp"
+        android:layout_marginEnd="12dp" />
+
+    <!-- Chat Room Name -->
+    <TextView
+        android:id="@+id/room_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/room_image"
+        android:layout_marginStart="8dp"
+        android:text="Chat Room Name"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:layout_alignParentTop="true" />
+
+    <!-- Last Message Preview -->
+    <TextView
+        android:id="@+id/last_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/room_name"
+        android:layout_toEndOf="@id/room_image"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:text="Last message preview"
+        android:textSize="14sp"
+        android:textColor="#888" />
+
+    <!-- Time of the Last Message -->
+    <TextView
+        android:id="@+id/message_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@id/room_name"
+        android:textSize="12sp"
+        android:textColor="#282B2A" />
+
+    <!-- Unread Message Count Badge -->
+    <TextView
+        android:id="@+id/unread_count"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/message_time"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:background="@drawable/badge_background"
+        android:text="3"
+        android:textSize="12sp"
+        android:textColor="@android:color/white"
+        android:visibility="gone"
+        android:layout_marginEnd="4dp" />
+
+</RelativeLayout>

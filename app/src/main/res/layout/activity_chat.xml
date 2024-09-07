@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fouth"
+    tools:context=".ChatActivity">
+
+    <!-- Toolbar Layout -->
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/my_primary"
+        android:padding="16dp"
+        android:elevation="4dp">
+
+        <!-- Back Button -->
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/icon_back"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:tint="@color/white"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true" />
+
+        <!-- Username TextView -->
+        <TextView
+            android:id="@+id/other_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/back_button"
+            android:layout_marginStart="16dp"
+            android:text="Username"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_centerVertical="true" />
+
+    </RelativeLayout>
+
+    <!-- RecyclerView for Chat Messages -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chat_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/toolbar"
+        android:background="@color/fouth"
+        android:layout_above="@id/bottom_layout"
+        android:clipToPadding="false"
+        android:padding="8dp" />
+
+    <!-- Bottom Layout for Message Input -->
+    <RelativeLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/my_primary"
+        android:elevation="8dp"
+        android:padding="8dp">
+
+        <!-- EditText for Message Input -->
+        <EditText
+            android:id="@+id/chat_message_input"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="8dp"
+            android:layout_toStartOf="@id/message_send_btn"
+            android:background="@drawable/edit_text_rounded_corner"
+            android:hint="Type a message..."
+            android:padding="12dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/grey" />
+
+        <!-- Send Button -->
+        <ImageButton
+            android:id="@+id/message_send_btn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/icon_send"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:tint="@color/my_secondary"
+            android:contentDescription="Send message"
+            android:padding="8dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

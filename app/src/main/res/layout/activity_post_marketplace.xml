@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/fouth">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@android:color/white">
+
+        <!-- Back Button -->
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_arrow_back_ios_24"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_gravity="start"
+            android:padding="8dp"/>
+
+        <!-- Icon for Post Marketplace -->
+        <ImageView
+            android:id="@+id/icPostMarketplace"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_postmarketplace"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="centerInside"/>
+
+        <!-- Product Name Label -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Product Name:"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Product Name -->
+        <EditText
+            android:id="@+id/productName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Product Name"
+            android:inputType="text"
+            android:background="@color/fouth"/>
+
+        <!-- Product Price Label -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Price:"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Product Price -->
+        <EditText
+            android:id="@+id/productPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Price"
+            android:inputType="numberDecimal"
+            android:background="@color/fouth"/>
+
+        <!-- Product Description Label -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Description:"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Product Description -->
+        <EditText
+            android:id="@+id/productDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Description"
+            android:inputType="textMultiLine"
+            android:minLines="3"
+            android:background="@color/fouth"/>
+
+        <!-- Seller Location -->
+
+        <!-- Upload Photo -->
+        <Button
+            android:id="@+id/uploadPhotoButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Upload Photo"
+            android:layout_marginTop="16dp"/>
+
+
+
+        <!-- ImageView to show uploaded photo -->
+        <ImageView
+            android:id="@+id/uploadedImageView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="16dp"
+            android:scaleType="fitCenter"
+            android:visibility="gone"/>
+
+
+
+
+
+        <!-- Submit Button -->
+        <Button
+            android:id="@+id/submitPostButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Post"
+            android:layout_marginTop="16dp"/>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,169 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#dafafb"
+    android:padding="16dp"
+    tools:context=".EditProfileActivity">
+
+    <ImageView
+        android:id="@+id/back_button"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/icon_back"
+        android:contentDescription="Back Button"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:clickable="true"
+        android:focusable="true" />
+
+
+
+    <!-- Username Label -->
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="158dp"
+        android:layout_height="156dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="113dp"
+        android:layout_marginTop="54dp"
+        android:src="@drawable/unitalk" />
+
+    <TextView
+        android:id="@+id/usernameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/logoImageView"
+        android:text="Username"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <!-- Username EditText -->
+    <EditText
+        android:id="@+id/usernameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/usernameLabel"
+        android:layout_marginTop="4dp"
+        android:background="#B4ECF3"
+        android:hint="Enter your username"
+        android:inputType="textPersonName"
+        android:textColor="#0E0B0B"
+        android:textColorHint="#9E9E9E" />
+
+    <!-- Phone Number Label -->
+    <TextView
+        android:id="@+id/phoneNumberLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/usernameEditText"
+        android:layout_marginTop="16dp"
+        android:text="Phone Number"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <!-- Phone Number EditText -->
+    <EditText
+        android:id="@+id/phoneNumberEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/phoneNumberLabel"
+        android:layout_marginTop="4dp"
+        android:background="#B4ECF3"
+        android:hint="Enter your phone number"
+        android:inputType="phone"
+        android:textColor="#151010"
+        android:textColorHint="#9E9E9E" />
+
+    <!-- Bio Label -->
+    <TextView
+        android:id="@+id/bioLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/phoneNumberEditText"
+        android:layout_marginTop="16dp"
+        android:text="Bio"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <!-- Bio EditText -->
+    <EditText
+        android:id="@+id/bioEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bioLabel"
+        android:layout_marginTop="4dp"
+        android:background="#B4ECF3"
+        android:hint="Tell us about yourself"
+        android:inputType="textMultiLine"
+        android:lines="4"
+        android:maxLines="6"
+        android:scrollbars="vertical"
+        android:textColor="#120C0C"
+        android:textColorHint="#9E9E9E" />
+
+    <!-- Birthday Label -->
+    <TextView
+        android:id="@+id/birthdayLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bioEditText"
+        android:layout_marginTop="16dp"
+        android:text="Birthday"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <!-- Birthday EditText -->
+    <EditText
+        android:id="@+id/birthdayEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/birthdayLabel"
+        android:layout_marginTop="4dp"
+        android:background="#B4ECF3"
+        android:clickable="true"
+        android:focusable="false"
+        android:hint="Enter your birthday"
+        android:inputType="date"
+        android:textColor="#120B0B"
+        android:textColorHint="#9E9E9E" />
+
+    <!-- Gender Label -->
+    <TextView
+        android:id="@+id/genderLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/birthdayEditText"
+        android:layout_marginTop="16dp"
+        android:text="Gender"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <!-- Gender EditText -->
+    <EditText
+        android:id="@+id/genderEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/genderLabel"
+        android:layout_marginTop="4dp"
+        android:background="#B4ECF3"
+        android:hint="Enter your gender"
+        android:inputType="textPersonName"
+        android:textColor="#171010"
+        android:textColorHint="#9E9E9E" />
+
+    <!-- Save Button -->
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/genderEditText"
+        android:layout_marginTop="24dp"
+        android:background="#48AAAD"
+        android:text="Save"
+        android:textColor="#FFFFFF" />
+
+</RelativeLayout>

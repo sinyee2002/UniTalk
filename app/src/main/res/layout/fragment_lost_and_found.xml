@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fouth"
+    android:padding="8dp">
+
+    <!-- Top Menu -->
+    <LinearLayout
+        android:id="@+id/top_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingVertical="8dp"
+        android:paddingHorizontal="16dp"
+        android:background="?attr/colorPrimary">
+
+        <ImageView
+            android:id="@+id/user_profile"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/person_icon"
+            android:contentDescription="User Profile" />
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:text="Username"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white" />
+
+        <ImageView
+            android:id="@+id/menu_button"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:contentDescription="Menu Button"
+            android:src="@drawable/ic_menu"
+            app:tint="@android:color/white" />
+    </LinearLayout>
+
+    <!-- Search and Filter Bar -->
+    <LinearLayout
+        android:id="@+id/search_filter_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top_menu"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="8dp">
+
+        <EditText
+            android:id="@+id/search_bar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Search Lost and Found..."
+            android:drawableStart="@drawable/icon_search"
+            android:paddingVertical="12dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:background="@drawable/edit_text_rounded_corner"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/white"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/darker_gray"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/search_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search"
+            android:layout_marginStart="8dp"
+            android:backgroundTint="?attr/colorPrimary"
+            android:textColor="@android:color/white"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            android:elevation="2dp"
+            android:background="@drawable/button_rounded" />
+
+        <Button
+            android:id="@+id/filter_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:backgroundTint="?attr/colorPrimary"
+            android:textColor="@android:color/white"
+            android:text="Filter"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            android:elevation="2dp"
+            android:background="@drawable/button_rounded" />
+    </LinearLayout>
+
+    <!-- Upload Lost Item Button -->
+    <Button
+        android:id="@+id/upload_lost_item_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/search_filter_bar"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="?attr/colorPrimary"
+        android:textColor="@android:color/white"
+        android:text="Upload Lost Item"
+        android:paddingVertical="12dp"
+        android:layout_marginBottom="8dp"
+        android:elevation="2dp"
+        android:background="@drawable/button_rounded" />
+
+    <!-- RecyclerView for displaying posts -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/upload_lost_item_button"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="8dp"
+        android:clipToPadding="false"
+        android:paddingBottom="16dp" />
+
+</RelativeLayout>

@@ -1,0 +1,153 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#dafafb"
+    android:padding="16dp">
+
+    <!-- Back Button -->
+    <ImageView
+        android:id="@+id/back_button"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/icon_back"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- Main Content Layout -->
+    <LinearLayout
+        android:id="@+id/contentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintBottom_toTopOf="@id/fabChat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/back_button">
+
+        <!-- Seller Information -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Seller:"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/sellerUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/fouth"
+            android:text="Seller Username"
+            android:textColor="#201D1D"
+            android:textSize="18sp" />
+
+        <!-- Product Image -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:text="Product Image:"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/productImage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/fouth"
+            android:scaleType="centerCrop" />
+
+        <!-- Product Name and Price -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:text="Product Details:"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/productName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/fouth"
+                android:text="Product Name"
+                android:textColor="#201D1D" />
+
+            <TextView
+                android:id="@+id/productPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#97CBCC"
+                android:text="RM 50"
+                android:textColor="#201D1D" />
+        </LinearLayout>
+
+        <!-- Product Description -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:text="Description:"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/productDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/fouth"
+            android:paddingTop="8dp"
+            android:text="Product Description"
+            android:textColor="#201D1D" />
+
+        <!-- Location -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:text="Location:"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- Google Map -->
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/fouth" />
+    </LinearLayout>
+
+    <!-- Floating Action Button for Chat -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabChat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:contentDescription="@string/chat"
+        app:backgroundTint="#48AAAD"
+        app:srcCompat="@drawable/chat_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

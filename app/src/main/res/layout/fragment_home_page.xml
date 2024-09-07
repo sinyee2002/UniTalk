@@ -1,0 +1,64 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#dafafb"
+    android:padding="16dp">
+
+    <!-- Top profile section -->
+    <LinearLayout
+        android:id="@+id/top_menu"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="?attr/colorPrimary"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp">
+
+        <TextView
+            android:id="@+id/Profileusername"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:text="Username"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/menu_button"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="Menu Button"
+            android:src="@drawable/ic_menu"
+            app:tint="@color/white" />
+    </LinearLayout>
+
+    <!-- Post input area -->
+    <TextView
+        android:id="@+id/post_input"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/top_menu"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/rounded_edittext"
+        android:hint="Write a post..."
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:textColor="#636161"
+        android:textColorHint="#7A7777" />
+
+    <!-- Post feed section -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/post_input"
+        android:layout_marginTop="5dp"
+        android:padding="8dp" />
+
+</RelativeLayout>

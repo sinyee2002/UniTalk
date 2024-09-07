@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">uniTalk</string>
+    <string name="default_web_client_id">267979036011-au7aj4859er6gcsbo9pba9jqvh5bn90b.apps.googleusercontent.com</string>
+    <string name="product_image_description">Product Image</string>
+    <string name="sell_something">Sell Something...</string>
+    <string name="select_location">Select Location</string>
+    <string-array name="location_array">
+        <item>Kampar</item>
+        <item>Sungai Long</item>
+    </string-array>
+    <string name="chat">Chat</string>
+    <string name="clear_notification">Clear Notification</string>
+    <string name="notification_icon_desc">Notification Icon</string>
+
+</resources>
+

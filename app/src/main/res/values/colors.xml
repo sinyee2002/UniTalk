@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="my_primary">#48AAAD</color>
+    <color name="my_secondary">#FFFFFF</color>
+    <color name="third">#368881</color>
+    <color name="fouth">#DBF1EF</color>
+    <color name="off_white">#FAFAFA</color>
+    <color name="light_gray">#C3C3C3</color>
+    <color name="chat_color_sender">#E51E1E</color>
+    <color name="chat_color_receiver">#7CB342</color>
+    <color name="grey">#465051</color>
+    <color name="colorAccent">#FF4081</color>
+</resources>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Logo Image -->
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="158dp"
+        android:layout_height="156dp"
+        android:layout_marginTop="54dp"
+        android:src="@drawable/unitalk"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Sign In Text -->
+    <TextView
+        android:id="@+id/signInText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="15dp"
+        android:text="Sign In"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/my_primary"
+        app:layout_constraintBottom_toTopOf="@id/emailLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logoImageView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!-- Email Label -->
+    <TextView
+        android:id="@+id/emailLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginTop="15dp"
+        android:text="Email/Username"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signInText" />
+
+    <!-- Email EditText -->
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:background="@color/fouth"
+        android:hint="Email/Username"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/emailLabel" />
+
+    <!-- Password Label -->
+    <TextView
+        android:id="@+id/passwordLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Password"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/email"
+        app:layout_constraintHorizontal_bias="0.0" />
+
+    <!-- Password EditText -->
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:background="@color/fouth"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@id/togglePasswordVisibility"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/passwordLabel" />
+
+    <!-- Toggle Password Visibility -->
+    <ImageView
+        android:id="@+id/togglePasswordVisibility"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_visibility_off_24"
+        android:contentDescription="Toggle Password Visibility"
+        android:padding="8dp"
+        android:background="@color/fouth"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/passwordLabel"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintVertical_bias="0.0" />
+    <!-- Confirm Password Label -->
+
+    <!-- Sign In Button -->
+    <Button
+        android:id="@+id/signInButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="#48AAAD"
+        android:text="Sign In"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/password" />
+
+    <!-- Or Sign In By Text -->
+    <TextView
+        android:id="@+id/orSignInByText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:text="Or Sign In With"
+        android:textSize="16sp"
+        android:textColor="@color/light_gray"
+        app:layout_constraintBottom_toTopOf="@id/googleSignInButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signInButton" />
+
+    <!-- Google Sign-In Button -->
+    <ImageView
+        android:id="@+id/googleSignInButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="15dp"
+        android:contentDescription="Sign In with Google"
+        android:src="@drawable/google"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.521"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/orSignInByText" />
+
+    <!-- Register Link -->
+    <TextView
+        android:id="@+id/registerLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="2dp"
+        android:gravity="center"
+        android:text="Don't have an account? Register"
+        android:textColor="@android:color/holo_blue_light"
+        app:layout_constraintBottom_toTopOf="@id/forgotPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/googleSignInButton"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!-- Forgot Password Link -->
+    <TextView
+        android:id="@+id/forgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Forgot Password?"
+        android:textColor="@android:color/holo_blue_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/registerLink" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

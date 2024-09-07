@@ -1,0 +1,80 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fouth"
+    android:padding="8dp">
+
+    <!-- Top Menu -->
+    <LinearLayout
+        android:id="@+id/top_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingVertical="8dp"
+        android:paddingHorizontal="16dp"
+        android:background="?attr/colorPrimary">
+
+        <ImageView
+            android:id="@+id/user_profile"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/person_icon"
+            android:contentDescription="User Profile" />
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:text="Username"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white" />
+
+        <ImageView
+            android:id="@+id/menu_button"
+            android:layout_width="18dp"
+            android:layout_height="22dp"
+            android:contentDescription="Menu Button"
+            android:src="@drawable/ic_menu"
+            app:tint="@android:color/white" />
+    </LinearLayout>
+
+    <!-- Clear All Button -->
+    <Button
+        android:id="@+id/clear_all_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top_menu"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="Clear All"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/my_primary"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp" />
+
+    <!-- Notification List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_notifications"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/clear_all_button"
+        android:layout_marginTop="8dp" />
+
+    <!-- No Notifications Message -->
+    <TextView
+        android:id="@+id/no_notifications_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="There are no notifications"
+        android:textSize="18sp"
+        android:textColor="@android:color/darker_gray"
+        android:visibility="gone" />
+
+</RelativeLayout>
